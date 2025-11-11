@@ -1,0 +1,46 @@
+# Store Ratings Platform
+
+Tech stack:
+- Backend: Express.js + Sequelize + MySQL
+- Frontend: React (Vite)
+
+This repository contains a scaffold for a store-rating web application with role-based access (System Administrator, Normal User, Store Owner). The scaffold includes a working Express backend with models and basic auth, and a React frontend skeleton.
+
+Quick start (local development)
+
+If Docker isn't available, you can run the backend and frontend locally.
+
+1. Start the backend:
+
+```cmd
+cd backend
+copy .env.example .env
+# Edit backend\.env to set DB_HOST, DB_USER, DB_PASS, JWT_SECRET (if needed)
+npm install
+npm run dev
+```
+
+2. Seed the database (after the backend has started and DB is ready):
+
+```cmd
+cd backend
+npm run seed
+```
+
+3. Start the frontend (separate terminal):
+
+```cmd
+cd frontend
+npm install
+set VITE_API_BASE=http://localhost:4000
+npm run dev
+```
+
+4. Open the frontend in your browser: http://localhost:5173
+
+Seeded demo accounts (from `backend/scripts/seed.js`):
+- admin: admin@storely.test / Admin@1234
+- owner: owner@storely.test / Owner@1234
+- user: user@storely.test / User@1234
+
+
