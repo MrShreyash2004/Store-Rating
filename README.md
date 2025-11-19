@@ -20,14 +20,7 @@ npm install
 npm run dev
 ```
 
-2. Seed the database (if needed ):
-
-```cmd
-cd backend
-npm run seed
-```
-
-3. Start the frontend (separate terminal):
+2. Start the frontend (separate terminal):
 
 ```cmd
 cd frontend
@@ -36,7 +29,7 @@ set VITE_API_BASE=http://localhost:4000
 npm run dev
 ```
 
-4. Open the frontend in your browser: http://localhost:5173
+3. Open the frontend in your browser: http://localhost:5173
 
 
 
