@@ -1,4 +1,4 @@
-# Backend (Express + Sequelize)
+# Backend (Express )
 
 
 Development (manual/local)
@@ -7,7 +7,7 @@ Development (manual/local)
 
 ```cmd
 cd backend
-copy .env.example .env
+copy .env
 # edit backend\.env to set DB_HOST, DB_USER, DB_PASS, JWT_SECRET
 ```
 
@@ -42,11 +42,11 @@ API endpoints (high level)
 - POST /ratings/:storeId — submit/update rating (user)
 - Admin routes (require admin role): /admin/*
 - Owner routes (require owner role): /owner/*
-# Backend (Express + Sequelize)
+# Backend (Express)
 
 Setup
 
-1. Copy `.env.example` to `.env` and fill database credentials.
+1. In .env fill database credentials.
 2. Install dependencies:
 
 ```bash
