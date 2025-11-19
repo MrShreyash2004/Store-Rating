@@ -38,9 +38,6 @@ npm run dev
 
 4. Open the frontend in your browser: http://localhost:5173
 
-Seeded demo accounts (from `backend/scripts/seed.js`):
-- admin: admin@storely.test / Admin@1234
-- owner: owner@storely.test / Owner@1234
-- user: user@storely.test / User@1234
+
 
 
