@@ -20,18 +20,6 @@ npm run dev
 
 The backend listens on port `4000` by default and will attempt to connect to the MySQL database configured in `.env`.
 
-Seeding sample data
-
-After the backend is running and the database is ready, run:
-
-```cmd
-npm run seed
-```
-
-This will create demo users and stores, including:
-- admin@storely.test / Admin@1234
-- owner@storely.test / Owner@1234
-- user@storely.test / User@1234
 
 API endpoints (high level)
 
