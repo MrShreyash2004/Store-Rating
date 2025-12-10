@@ -1,35 +1,75 @@
 # Store Ratings Platform
 
-Tech stack:
-- Backend: Express.js + MySQL
-- Frontend: React (Vite)
+Role-based store ratings app with Express/Sequelize/MySQL backend and React (Vite) frontend.
 
-This repository contains a scaffold for a store-rating web application with role-based access (System Administrator, Normal User, Store Owner). The scaffold includes a working Express backend with models and basic auth, and a React frontend skeleton.
+## Tech Stack
+- Backend: Node.js, Express, Sequelize, MySQL
+- Frontend: React, Vite, Axios
 
-Quick start (local development)
+## Current Data
+Stores:
+1) Bhupesh Bakery and Dairy — Wardha  
+2) Mauli Tel Bhandar — Amravati  
+3) Mayur General Store — Bhandara
+`
 
-If Docker isn't available, you can run the backend and frontend locally.
+## Prerequisites
+- Node.js 18+ and npm
+- MySQL running locally
 
-1. Start the backend:
-
+## Backend (port 4004)
+1) Configure env:
 ```cmd
 cd backend
 copy .env
-# Edit backend\.env to set DB_HOST, DB_USER, DB_PASS, JWT_SECRET replace with ours
+# then edit .env with your DB creds (DB_NAME, DB_USER, DB_PASS, DB_HOST, DB_PORT, JWT_SECRET)
+```
+
+2) Install & run:
+```cmd
 npm install
 npm run dev
 ```
 
-2. Start the frontend (separate terminal):
 
+## Frontend (default port 5173)
+1) Install & run:
 ```cmd
 cd frontend
 npm install
-set VITE_API_BASE=http://localhost:4000
 npm run dev
 ```
 
-3. Open the frontend in your browser: http://localhost:5173
+2) API base URL: the frontend defaults to `http://localhost:4004` via `src/api.js`. If you change the backend port, set an env var before running Vite:
+```cmd
+set VITE_API_BASE=http://localhost:4004
+npm run dev
+```
+
+## Typical Flow
+- Anyone can browse stores.
+- Login required to rate.
+- Normal user: rates stores, sees “Your Ratings” on dashboard.
+- Store owner: sees owned stores and ratings on dashboard.
+- Admin: sees totals and recent ratings on dashboard.
+
+## Useful Scripts (backend)
+- `npm run dev` — start backend with nodemon
+
+
+## Screenshots
+
+### Admin Dashboard
+![Admin Dashboard](docs/images/admin%20dashboard.png)
+
+### Store Owner Dashboard
+![Owner Dashboard](docs/images/owner%20dashboard.png)
+
+### Normal User Dashboard
+![User Dashboard](docs/images/user%20dashboard.png)
+
+### General Dashboard
+![Dashboard](docs/images/dashboard.png)
 
 
 
